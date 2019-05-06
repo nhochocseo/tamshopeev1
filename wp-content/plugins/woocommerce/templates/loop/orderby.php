@@ -21,12 +21,50 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<form class="woocommerce-ordering" method="get">
-	<select name="orderby" class="orderby">
-		<?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
-			<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>
-		<?php endforeach; ?>
-	</select>
-	<input type="hidden" name="paged" value="1" />
-	<?php wc_query_string_form_fields( null, array( 'orderby', 'submit', 'paged', 'product-page' ) ); ?>
-</form>
+<div class="main-seach">
+<div class="row">
+	<div class="col-md-3">
+  		sfsdf
+  </div>
+  <div class="col-md-3">
+		<form class="elementor-search-form" role="search"  method="get">
+			<div class="elementor-search-form__container">
+					<input placeholder="Search..." class="elementor-search-form__input" type="search" name="s" title="Search" value="">
+					<button class="elementor-search-form__submit" type="submit">
+								<i class="fa fa-search" aria-hidden="true"></i>
+						</button>
+			</div>
+		</form>
+	</div>
+  <div class="col-md-3">
+	<div class="form-group row">
+		<label for="" class="col-sm-3 col-form-label">Sắp sếp theo :</label>
+		<div class="col-sm-9">
+			<form class="woocommerce-ordering" method="get">
+				<select name="orderby" class="orderby">
+					<?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
+						<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>
+					<?php endforeach; ?>
+				</select>
+				<input type="hidden" name="paged" value="1" />
+				<?php wc_query_string_form_fields( null, array( 'orderby', 'submit', 'paged', 'product-page' ) ); ?>
+			</form>
+		</div>
+	</div>
+	</div>
+	<div class="col-md-3">
+		<div class="form-group row">
+			<label for="" class="col-sm-3 col-form-label">Khoảng giá :</label>
+			<div class="col-sm-9">
+				<form class="woocommerce-ordering" method="get">
+					<select name="price_select" class="orderby">
+						<option value="0">Chọn khoảng giá</option>
+						<option value="1">Dưới 100.000 VND</option>
+						<option value="2">Trên  100.000 VND</option>
+					</select>
+					<input type="hidden" name="paged" value="1" />
+				</form>
+			</div>
+	</div>
+</div>
+</div>
