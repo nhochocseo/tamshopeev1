@@ -1,0 +1,6 @@
+2019-04-21T14:08:17+00:00 CRITICAL syntax error, unexpected '<' in C:\xampp\htdocs\tamshopeeee\wp-content\plugins\woocommerce\templates\single-product\add-to-cart\simple.php on line 27
+
+2019-04-21T14:17:24+00:00 CRITICAL syntax error, unexpected end of file, expecting ',' or ';' in C:\xampp\htdocs\tamshopeeee\wp-content\plugins\woocommerce\templates\loop\add-to-cart.php on line 36
+
+2019-04-21T14:17:55+00:00 CRITICAL syntax error, unexpected '<' in C:\xampp\htdocs\tamshopeeee\wp-content\plugins\woocommerce\templates\loop\add-to-cart.php on line 35
+
