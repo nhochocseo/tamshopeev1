@@ -165,7 +165,7 @@ if ( ! function_exists( 'oceanwp_woo_product_elements_positioning' ) ) {
 
 		// Apply filters for easy modification
 		$sections = apply_filters( 'ocean_woo_product_elements_positioning', $sections );
-
+		
 		// Return sections
 		return $sections;
 

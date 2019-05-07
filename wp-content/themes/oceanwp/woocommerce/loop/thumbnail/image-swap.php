@@ -78,7 +78,7 @@ if ( $secondary_img_id ) : ?>
 
 <?php else : ?>
 
-	<div class="woo-entry-image clr">
+	<div class="woo-entry-image clr canfix">
 		<?php do_action( 'ocean_before_product_entry_image' ); ?>
 		<a href="<?php the_permalink(); ?>" class="woocommerce-LoopProduct-link">
 			<?php

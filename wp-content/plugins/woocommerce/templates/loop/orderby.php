@@ -57,9 +57,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<label for="" class="col-sm-3 col-form-label">Khoảng giá :</label>
 			<div class="col-sm-9">
 				<form class="woocommerce-ordering" method="get">
-					<select name="price_select" class="orderby">
+					<select name="orderby" class="orderby">
 						<option value="0">Chọn khoảng giá</option>
-						<option value="1">Dưới 100.000 VND</option>
+						<option value="duoi1tr">Dưới 100.000 VND</option>
 						<option value="2">Trên  100.000 VND</option>
 					</select>
 					<input type="hidden" name="paged" value="1" />

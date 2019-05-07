@@ -13,7 +13,7 @@ global $product, $post;
 
 do_action( 'ocean_before_archive_product_item' );
 
-echo '<ul class="woo-entry-inner clr">';
+echo '<ul class="woo-entry-inner clr ahihi">';
 
 	// Get elements
 	$elements = oceanwp_woo_product_elements_positioning();
@@ -24,7 +24,7 @@ echo '<ul class="woo-entry-inner clr">';
 		// Image
 		if ( 'image' == $element ) {
 
-			echo '<li class="image-wrap">';
+			echo '<li class="image-wrap alulu">';
 				do_action( 'ocean_before_archive_product_image' );
 				if ( class_exists( 'OceanWP_WooCommerce_Config' ) ) {
 					OceanWP_WooCommerce_Config::add_out_of_stock_badge();
