@@ -20,7 +20,7 @@ echo '<ul class="woo-entry-inner clr ahihi">';
 
 	// Loop through elements
 	foreach ( $elements as $element ) {
-
+		var_dump($element);
 		// Image
 		if ( 'image' == $element ) {
 

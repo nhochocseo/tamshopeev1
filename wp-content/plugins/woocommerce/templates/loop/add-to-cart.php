@@ -11,7 +11,6 @@
  * the readme will list any important changes.
  *
  * @see 	    https://docs.woocommerce.com/document/template-structure/
- * @author 		WooThemes
  * @package 	WooCommerce/Templates
  * @version     3.3.0
  */
@@ -31,4 +30,3 @@ echo apply_filters( 'woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
 		esc_html( $product->add_to_cart_text() )
 	),
 $product, $args );
-
