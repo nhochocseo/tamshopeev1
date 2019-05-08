@@ -37,3 +37,18 @@ define( 'AUTOMATIC_UPDATER_DISABLED', true );
 //chinh font Editor
 add_editor_style('css/custom-editor.css');
 
+add_filter('woocommerce_catalog_orderby', 'wc_customize_product_sorting');
+
+function wc_customize_product_sorting($sorting_options){
+    $sorting_options = array(
+        'menu_order' => __( 'Chọn sắp sếp', 'woocommerce' ),
+        'popularity' => __( 'Sắp sếp theo mức độ phổ biến', 'woocommerce' ),
+        'rating'     => __( 'Sắp sếp theo thứ hạng trung bình', 'woocommerce' ),
+        'date'       => __( 'Sắp sếp theo mới nhất', 'woocommerce' ),
+        'price'      => __( 'Sắp sếp theo giá: thấp -> cao', 'woocommerce' ),
+        'price-desc' => __( 'Sắp sếp theo giá: cao -> thấp', 'woocommerce' ),
+    );
+
+    return $sorting_options;
+}
+
