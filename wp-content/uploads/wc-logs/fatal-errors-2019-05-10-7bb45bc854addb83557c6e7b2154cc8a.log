@@ -1,0 +1,15 @@
+2019-05-10T16:14:50+00:00 CRITICAL Uncaught Error: Function name must be a string in F:\Xampp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\part\wc-single.php:24
+Stack trace:
+#0 F:\Xampp\htdocs\tamshopeev1\wp-includes\template.php(706): require()
+#1 F:\Xampp\htdocs\tamshopeev1\wp-includes\template.php(653): load_template('F:\\Xampp\\htdocs...', false)
+#2 F:\Xampp\htdocs\tamshopeev1\wp-includes\general-template.php(157): locate_template(Array, true, false)
+#3 F:\Xampp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\functions.php(312): get_template_part('part/wc', 'single')
+#4 F:\Xampp\htdocs\tamshopeev1\wp-content\themes\oceanwp\woocommerce\loop\orderby.php(71): ListSanPham()
+#5 F:\Xampp\htdocs\tamshopeev1\wp-content\plugins\woocommerce\includes\wc-core-functions.php(249): include('F:\\Xampp\\htdocs...')
+#6 F:\Xampp\htdocs\tamshopeev1\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1390): wc_get_template('loop/orderby.ph...', Array)
+#7 F:\Xampp\htdocs\tamshopeev1\wp-includes\class-wp-hook.php( in F:\Xampp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\part\wc-single.php on line 24
+
+2019-05-10T16:59:57+00:00 CRITICAL Cannot use empty array elements in arrays in F:\Xampp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\functions.php on line 298
+
+2019-05-10T16:59:57+00:00 CRITICAL Cannot use empty array elements in arrays in F:\Xampp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\functions.php on line 298
+

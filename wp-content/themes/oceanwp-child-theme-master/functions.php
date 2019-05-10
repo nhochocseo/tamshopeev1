@@ -54,13 +54,6 @@ function wc_customize_product_sorting($sorting_options){
 
 function register_woo_price_range() {
     global $wp, $wp_the_query;
-
-        // if ( ! is_post_type_archive( 'product' ) && ! is_tax( get_object_taxonomies( 'product' ) ) ) {
-        //     return;
-        // }
-
-
-        
         // Find min and max price in current result set
         $prices = get_filtered_price();
         $min    = floor( $prices->min_price );
@@ -119,8 +112,6 @@ function register_woo_price_range() {
                     ),
                     $actual_link
                 );
-                $count_post = get_count_post($diff,$diff2);
-                echo "count post : ";
                 echo $count_post;
                 ?>
                 <li class="wc-layered-nav-term <?php if($min_price == $diff && $max_price == $diff2):?>active<?php endif;?>">
@@ -300,6 +291,51 @@ function get_data_post($min_price = '', $max_price = ''){
     $myposts = get_posts($args);
     return $myposts;
 }
+function get_all_data_post(){
+    global $wp_the_query;
+    $old_query       = $wp_the_query->query_vars;
+    $args = array(
+        'post_type' => array('product'),
+        'post_status'   =>  'publish',
+        'posts_per_page'    =>  -1,
+        'meta_query' => array(
+            array(
+                'key' => '_price',
+                'value' => array( 0, 50000000000000000000 ),
+                'compare' => 'BETWEEN',
+                'type' => 'NUMERIC'
+            )
+        )
+    );
+    $tax_query  = isset( $old_query['tax_query'] ) ? $old_query['tax_query'] : array();
+    if ( version_compare( WC_VERSION, '3.0.0', '>=' ) ) {
+        $tax_query[] = array(
+            'taxonomy' => 'product_visibility',
+            'field' => 'name',
+            'terms' => 'exclude-from-catalog',
+            'operator' => 'NOT IN',
+        );
+    } else {
+        $args['meta_query'][] = array(
+            'key' => '_visibility',
+            'value' => array( 'catalog', 'visible' ),
+            'compare' => 'IN'
+        );
+    }
+    if(is_tax()){
+        if ( ! empty( $old_query['taxonomy'] ) && ! empty( $old_query['term'] ) ) {
+            $tax_query[] = array(
+                'taxonomy' => $old_query['taxonomy'],
+                'terms'    => array( $old_query['term'] ),
+                'field'    => 'slug',
+            );
+        }
+    }
+    $args['tax_query']  = $tax_query;
+    $myposts = get_posts($args);
+    return $myposts;
+}
+
 function ListSanPham() {
     global $wp_query;
     global $post; // Call global $post variable
@@ -307,28 +343,26 @@ function ListSanPham() {
     $currency = get_woocommerce_currency_symbol();
     $min_price = isset( $_GET['min_price'] ) ? esc_attr( $_GET['min_price'] ) : '';
     $max_price = isset( $_GET['max_price'] ) ? esc_attr( $_GET['max_price'] ) : '';
-    echo $min_price;
-    echo $max_price;
     register_woo_price_range();
     $data = get_data_post($min_price,$max_price);
-    var_dump($data);
-    foreach($data as $item){
-        $post = $item;
-        setup_postdata($post);
-        var_dump($post);
-        echo $price;
-        the_title();
-        get_template_part( 'part/wc', 'single' );
-        echo "<hr/>";
-        wp_reset_postdata();
-    };
-?>
-<ul class="woo-entry-inner clr">
-<?php
-    get_template_part( 'part/wc', 'single' );
-
-?>
-</ul>
-<?php
-}
+    if($min_price == "" || $max_price == "") {
+        echo "aaaaaaaaaaaaa";
+        $data = get_all_data_post();
+    }
+    ?>
+    <ul class="products oceanwp-row clr grid">
+        <?php
+        if($data == false) {
+            return "Hiện không có sản phẩm nào";
+        }
+        foreach($data as $item){
+            $post = $item;
+            setup_postdata($post);
+            get_template_part( 'part/wc', 'single' );
+            wp_reset_postdata();
+        };
+    ?>
+    </ul>
+    <?php
+    }
 ?>
