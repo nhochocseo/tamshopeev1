@@ -60,10 +60,7 @@ function register_woo_price_range() {
         // }
 
 
-        $min_price = isset( $_GET['min_price'] ) ? esc_attr( $_GET['min_price'] ) : '';
-        $max_price = isset( $_GET['max_price'] ) ? esc_attr( $_GET['max_price'] ) : '';
-        echo $min_price;
-        echo $max_price;
+        
         // Find min and max price in current result set
         $prices = get_filtered_price();
         $min    = floor( $prices->min_price );
@@ -72,9 +69,6 @@ function register_woo_price_range() {
         if ( $min === $max ) {
             return;
         }
-
-        echo $args['before_widget'];
-        $widgetID = 'widget_'.$args['widget_id'];
         if ( ! empty( $instance['title'] ) ) {
             echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
         }
@@ -117,12 +111,13 @@ function register_woo_price_range() {
             while($diff < $max):
                 $diff2 = $diff + $range - 1;
                 if($diff2 >= $max) $diff2 = $max;
+                $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                 $form_action = add_query_arg(
                     array(
                         'min_price' => $diff,
                         'max_price' => $diff2
                     ),
-                    $form_action
+                    $actual_link
                 );
                 $count_post = get_count_post($diff,$diff2);
                 echo "count post : ";
@@ -136,10 +131,9 @@ function register_woo_price_range() {
             endwhile;?>
         </ul>
         <?php
-        var_dump($args);
         echo $args['after_widget'];
 }
-add_action( 'init', 'register_woo_price_range' );
+// add_action( 'init', 'register_woo_price_range' );
 function get_filtered_price() {
     global $wpdb, $wp_the_query;
 
@@ -178,68 +172,12 @@ function get_filtered_price() {
     if ( $search = WC_Query::get_main_search_query_sql() ) {
         $sql .= ' AND ' . $search;
     }
-    print_r($wpdb->get_row( $sql ));
+    $sql = apply_filters( 'woocommerce_price_filter_sql', $sql, $meta_query_sql, $tax_query_sql );
+    // print_r($wpdb->get_row( $sql ));
     return $wpdb->get_row( $sql );
 }
 function get_page_base_url() {
-    if ( defined( 'SHOP_IS_ON_FRONT' ) ) {
-        $link = home_url();
-    } elseif ( is_post_type_archive( 'product' ) || is_page( wc_get_page_id( 'shop' ) ) ) {
-        $link = get_post_type_archive_link( 'product' );
-    } elseif ( is_product_category() ) {
-        $link = get_term_link( get_query_var( 'product_cat' ), 'product_cat' );
-    } elseif ( is_product_tag() ) {
-        $link = get_term_link( get_query_var( 'product_tag' ), 'product_tag' );
-    } else {
-        $queried_object = get_queried_object();
-        $link = get_term_link( $queried_object->slug, $queried_object->taxonomy );
-    }
-
-    // Min/Max
-    if ( isset( $_GET['min_price'] ) ) {
-        $link = add_query_arg( 'min_price', wc_clean( $_GET['min_price'] ), $link );
-    }
-
-    if ( isset( $_GET['max_price'] ) ) {
-        $link = add_query_arg( 'max_price', wc_clean( $_GET['max_price'] ), $link );
-    }
-
-    // Orderby
-    if ( isset( $_GET['orderby'] ) ) {
-        $link = add_query_arg( 'orderby', wc_clean( $_GET['orderby'] ), $link );
-    }
-
-    /**
-     * Search Arg.
-     * To support quote characters, first they are decoded from &quot; entities, then URL encoded.
-     */
-    if ( get_search_query() ) {
-        $link = add_query_arg( 's', rawurlencode( htmlspecialchars_decode( get_search_query() ) ), $link );
-    }
-
-    // Post Type Arg
-    if ( isset( $_GET['post_type'] ) ) {
-        $link = add_query_arg( 'post_type', wc_clean( $_GET['post_type'] ), $link );
-    }
-
-    // Min Rating Arg
-    if ( isset( $_GET['rating_filter'] ) ) {
-        $link = add_query_arg( 'rating_filter', wc_clean( $_GET['rating_filter'] ), $link );
-    }
-
-    // All current filters
-    if ( $_chosen_attributes = WC_Query::get_layered_nav_chosen_attributes() ) {
-        foreach ( $_chosen_attributes as $name => $data ) {
-            $filter_name = sanitize_title( str_replace( 'pa_', '', $name ) );
-            if ( ! empty( $data['terms'] ) ) {
-                $link = add_query_arg( 'filter_' . $filter_name, implode( ',', $data['terms'] ), $link );
-            }
-            if ( 'or' == $data['query_type'] ) {
-                $link = add_query_arg( 'query_type_' . $filter_name, 'or', $link );
-            }
-        }
-    }
-
+    $link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";;
     return $link;
 }
 
@@ -261,7 +199,6 @@ function get_count_post($min_price = '', $max_price = ''){
             )
         )
     );
-
     $tax_query  = isset( $old_query['tax_query'] ) ? $old_query['tax_query'] : array();
     if ( version_compare( WC_VERSION, '3.0.0', '>=' ) ) {
         $tax_query[] = array(
@@ -303,7 +240,7 @@ function devvn_price($price, $args = array()){
     $negative        = $price < 0;
     $price           = apply_filters( 'raw_woocommerce_price', floatval( $negative ? $price * -1 : $price ) );
     $price           = apply_filters( 'formatted_woocommerce_price', number_format( $price, $decimals, $decimal_separator, $thousand_separator ), $price, $decimals, $decimal_separator, $thousand_separator );
-
+        var_dump($price);
     if ( apply_filters( 'woocommerce_price_trim_zeros', false ) && $decimals > 0 ) {
         $price = wc_trim_zeros( $price );
     }
@@ -317,3 +254,81 @@ function devvn_price($price, $args = array()){
 
     return apply_filters( 'devvn_price', $return, $price, $args );
 }
+function get_data_post($min_price = '', $max_price = ''){
+    echo $min_price;
+    if(!$max_price) return false;
+    global $wp_the_query;
+    $old_query       = $wp_the_query->query_vars;
+    $args = array(
+        'post_type' => array('product'),
+        'post_status'   =>  'publish',
+        'posts_per_page'    =>  -1,
+        'meta_query' => array(
+            array(
+                'key' => '_price',
+                'value' => array($min_price, $max_price),
+                'compare' => 'BETWEEN',
+                'type' => 'NUMERIC'
+            )
+        )
+    );
+    $tax_query  = isset( $old_query['tax_query'] ) ? $old_query['tax_query'] : array();
+    if ( version_compare( WC_VERSION, '3.0.0', '>=' ) ) {
+        $tax_query[] = array(
+            'taxonomy' => 'product_visibility',
+            'field' => 'name',
+            'terms' => 'exclude-from-catalog',
+            'operator' => 'NOT IN',
+        );
+    } else {
+        $args['meta_query'][] = array(
+            'key' => '_visibility',
+            'value' => array( 'catalog', 'visible' ),
+            'compare' => 'IN'
+        );
+    }
+    if(is_tax()){
+        if ( ! empty( $old_query['taxonomy'] ) && ! empty( $old_query['term'] ) ) {
+            $tax_query[] = array(
+                'taxonomy' => $old_query['taxonomy'],
+                'terms'    => array( $old_query['term'] ),
+                'field'    => 'slug',
+            );
+        }
+    }
+    $args['tax_query']  = $tax_query;
+    $myposts = get_posts($args);
+    return $myposts;
+}
+function ListSanPham() {
+    global $wp_query;
+    global $post; // Call global $post variable
+    global $woocommerce;
+    $currency = get_woocommerce_currency_symbol();
+    $min_price = isset( $_GET['min_price'] ) ? esc_attr( $_GET['min_price'] ) : '';
+    $max_price = isset( $_GET['max_price'] ) ? esc_attr( $_GET['max_price'] ) : '';
+    echo $min_price;
+    echo $max_price;
+    register_woo_price_range();
+    $data = get_data_post($min_price,$max_price);
+    var_dump($data);
+    foreach($data as $item){
+        $post = $item;
+        setup_postdata($post);
+        var_dump($post);
+        echo $price;
+        the_title();
+        get_template_part( 'part/wc', 'single' );
+        echo "<hr/>";
+        wp_reset_postdata();
+    };
+?>
+<ul class="woo-entry-inner clr">
+<?php
+    get_template_part( 'part/wc', 'single' );
+
+?>
+</ul>
+<?php
+}
+?>

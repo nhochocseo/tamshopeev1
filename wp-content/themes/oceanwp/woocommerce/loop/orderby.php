@@ -68,3 +68,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 </div>
 </div>
+<?php echo ListSanPham(); ?>

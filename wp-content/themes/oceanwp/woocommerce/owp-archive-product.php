@@ -10,7 +10,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $product, $post;
-
 do_action( 'ocean_before_archive_product_item' );
 
 echo '<ul class="woo-entry-inner clr ahihi">';
