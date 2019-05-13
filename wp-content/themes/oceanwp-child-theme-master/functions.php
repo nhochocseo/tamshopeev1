@@ -56,13 +56,6 @@ function wc_customize_product_sorting($sorting_options){
 
 function register_woo_price_range() {
     global $wp, $wp_the_query;
-
-        // if ( ! is_post_type_archive( 'product' ) && ! is_tax( get_object_taxonomies( 'product' ) ) ) {
-        //     return;
-        // }
-
-
-        
         // Find min and max price in current result set
         $prices = get_filtered_price();
         $min    = floor( $prices->min_price );
