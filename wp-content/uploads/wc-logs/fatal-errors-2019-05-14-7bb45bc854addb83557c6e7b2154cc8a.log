@@ -1,0 +1,46 @@
+2019-05-14T02:28:31+00:00 CRITICAL syntax error, unexpected ')' in D:\cvd\xammp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\functions.php on line 354
+
+2019-05-14T02:28:31+00:00 CRITICAL syntax error, unexpected ')' in D:\cvd\xammp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\functions.php on line 354
+
+2019-05-14T02:28:32+00:00 CRITICAL syntax error, unexpected ')' in D:\cvd\xammp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\functions.php on line 354
+
+2019-05-14T02:58:58+00:00 CRITICAL Object of class WP_Query could not be converted to string in D:\cvd\xammp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\functions.php on line 382
+
+2019-05-14T03:27:44+00:00 CRITICAL syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ';' in D:\cvd\xammp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\functions.php on line 343
+
+2019-05-14T03:27:44+00:00 CRITICAL syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ';' in D:\cvd\xammp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\functions.php on line 343
+
+2019-05-14T03:49:26+00:00 CRITICAL Uncaught Error: Cannot access self:: when no class scope is active in D:\cvd\xammp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\template\trang-tri-theo-mua.php:20
+Stack trace:
+#0 D:\cvd\xammp\htdocs\tamshopeev1\wp-includes\template-loader.php(77): include()
+#1 D:\cvd\xammp\htdocs\tamshopeev1\wp-blog-header.php(19): require_once('D:\\cvd\\xammp\\ht...')
+#2 D:\cvd\xammp\htdocs\tamshopeev1\index.php(17): require('D:\\cvd\\xammp\\ht...')
+#3 {main}
+  thrown in D:\cvd\xammp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\template\trang-tri-theo-mua.php on line 20
+
+2019-05-14T03:49:33+00:00 CRITICAL Uncaught Error: Cannot access self:: when no class scope is active in D:\cvd\xammp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\template\trang-tri-theo-mua.php:20
+Stack trace:
+#0 D:\cvd\xammp\htdocs\tamshopeev1\wp-includes\template-loader.php(77): include()
+#1 D:\cvd\xammp\htdocs\tamshopeev1\wp-blog-header.php(19): require_once('D:\\cvd\\xammp\\ht...')
+#2 D:\cvd\xammp\htdocs\tamshopeev1\index.php(17): require('D:\\cvd\\xammp\\ht...')
+#3 {main}
+  thrown in D:\cvd\xammp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\template\trang-tri-theo-mua.php on line 20
+
+2019-05-14T03:49:43+00:00 CRITICAL Uncaught Error: Cannot access self:: when no class scope is active in D:\cvd\xammp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\template\trang-tri-theo-mua.php:19
+Stack trace:
+#0 D:\cvd\xammp\htdocs\tamshopeev1\wp-includes\template-loader.php(77): include()
+#1 D:\cvd\xammp\htdocs\tamshopeev1\wp-blog-header.php(19): require_once('D:\\cvd\\xammp\\ht...')
+#2 D:\cvd\xammp\htdocs\tamshopeev1\index.php(17): require('D:\\cvd\\xammp\\ht...')
+#3 {main}
+  thrown in D:\cvd\xammp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\template\trang-tri-theo-mua.php on line 19
+
+2019-05-14T06:44:27+00:00 CRITICAL syntax error, unexpected 'alias' (T_STRING), expecting ']' in D:\cvd\xammp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\template\trang-tri-theo-mua.php on line 10
+
+2019-05-14T08:03:34+00:00 CRITICAL require_once(): Failed opening required '/functions/function.php' (include_path='D:\cvd\xammp\php\PEAR') in D:\cvd\xammp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\functions.php on line 22
+
+2019-05-14T08:06:43+00:00 CRITICAL require_once(): Failed opening required '/functions/function.php' (include_path='D:\cvd\xammp\php\PEAR') in D:\cvd\xammp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\functions.php on line 22
+
+2019-05-14T08:06:44+00:00 CRITICAL require_once(): Failed opening required '/functions/function.php' (include_path='D:\cvd\xammp\php\PEAR') in D:\cvd\xammp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\functions.php on line 22
+
+2019-05-14T08:06:44+00:00 CRITICAL require_once(): Failed opening required '/functions/function.php' (include_path='D:\cvd\xammp\php\PEAR') in D:\cvd\xammp\htdocs\tamshopeev1\wp-content\themes\oceanwp-child-theme-master\functions.php on line 22
+

@@ -19,6 +19,7 @@
  *
  * @link http://codex.wordpress.org/Child_Themes
  */
+require_once("functions/function.php");
 function oceanwp_child_enqueue_parent_style() {
 	// Dynamically get version number of the parent stylesheet (lets browsers re-cache your stylesheet when you update your theme)
 	$theme   = wp_get_theme( 'OceanWP' );
@@ -158,6 +159,37 @@ function get_count_post($min_price = '', $max_price = ''){
                 'type' => 'NUMERIC'
             )
         )
+        // 'meta_query' => array(
+        //     'relation' => 'OR',
+        //     array(
+        //         array(
+        //             'key' => '_price',
+        //             'value' => 10,
+        //             'compare' => '>=',
+        //             'type' => 'NUMERIC'
+        //         ),
+        //         array(
+        //             'key' => '_price',
+        //             'value' => 15,
+        //             'compare' => '<=',
+        //             'type' => 'NUMERIC'
+        //         )
+        //     ),
+        //     array(
+        //         array(
+        //             'key' => '_sale_price',
+        //             'value' => 10,
+        //             'compare' => '>=',
+        //             'type' => 'NUMERIC'
+        //         ),
+        //         array(
+        //             'key' => '_sale_price',
+        //             'value' => 15,
+        //             'compare' => '<=',
+        //             'type' => 'NUMERIC'
+        //         )
+        //     )
+        // )
     );
     $tax_query  = isset( $old_query['tax_query'] ) ? $old_query['tax_query'] : array();
     if ( version_compare( WC_VERSION, '3.0.0', '>=' ) ) {
@@ -290,48 +322,37 @@ function get_data_post_order($order){
     return $products;
 }
 function get_seach_data_post($key){
-    global $wp_the_query;
-    $old_query       = $wp_the_query->query_vars;
-    $args = array(
-        'limit' => 2,
-        'post_type' => array('product'),
-        'post_status'   =>  'publish',
-        'posts_per_page'    =>  -1,
-        'meta_query' => array(
-            array(
-                'key' => 'my_meta_key',
-                'value' => $key,
-                'compare' => 'LIKE',
-            )
-        )
-    );
-    $tax_query  = isset( $old_query['tax_query'] ) ? $old_query['tax_query'] : array();
-    if ( version_compare( WC_VERSION, '3.0.0', '>=' ) ) {
-        $tax_query[] = array(
-            'taxonomy' => 'product_visibility',
-            'field' => 'name',
-            'terms' => 'exclude-from-catalog',
-            'operator' => 'NOT IN',
+    $post_type  = 'product';
+        $args  		= array(
+            's'                => $key,
+            'post_type'        => $post_type,
+            'post_status'      => 'publish',
+            'posts_per_page'   => 5,
         );
-    } else {
-        $args['meta_query'][] = array(
-            'key' => '_visibility',
-            'value' => array( 'catalog', 'visible' ),
-            'compare' => 'IN'
-        );
-    }
-    if(is_tax()){
-        if ( ! empty( $old_query['taxonomy'] ) && ! empty( $old_query['term'] ) ) {
-            $tax_query[] = array(
-                'taxonomy' => $old_query['taxonomy'],
-                'terms'    => array( $old_query['term'] ),
-                'field'    => 'slug',
-            );
-        }
-    }
-    $args['tax_query']  = $tax_query;
-    $myposts = get_posts($args);
-    return $myposts;
+		$query 		= new WP_Query( $args );
+		$output 	= '';
+
+		// Icons
+		if ( is_RTL() ) {
+			$icon = 'left';
+		} else {
+			$icon = 'right';
+		}
+
+		if ( $query->have_posts() ) {
+
+			$output .= '<div class="main-product">';			
+				while( $query->have_posts() ) : $query->the_post();
+                $output .=  get_template_part( 'part/wc', 'single' );
+				endwhile;
+            $output .= '</div>';
+		
+		} else {			
+			$output .= get_template_part( 'part/wc', 'datanull' );			
+		}		
+		wp_reset_query();
+		echo $output;		
+		die();
 }
 function ListSanPham() {
     global $wp_query;

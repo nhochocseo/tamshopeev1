@@ -25,3 +25,20 @@ Version: 1.0
 .search-container input {
     width: 60%;
 }
+.container-custom {
+    width: 90%;
+    margin: auto;
+}
+.header-product .title {
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 3px solid #23a455;
+    margin-bottom: 15px;
+    color: black;
+}
+.header-product .content {
+    text-align: center;
+    margin-bottom: 20px;
+}
