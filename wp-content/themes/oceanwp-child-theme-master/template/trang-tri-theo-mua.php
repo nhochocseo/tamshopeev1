@@ -10,32 +10,28 @@ get_header();
 ?>
 <div class="container-custom">
 	<div class="row">
-		<div class="col-md-3">
-			<?php wp_nav_menu( array(
+		<div class="col-md-2">
+			<!-- <?php wp_nav_menu( array(
 				'theme_location' => 'main-nav', // tên location cần hiển thị
 				'container' => 'nav', // thẻ container của menu
 				'container_class' => 'main-nav', //class của container
 				'menu_class' => 'menu clearfix' // class của menu bên trong
-			) ); ?>
+			) ); ?> -->
+			<?php echo do_shortcode( '[elementor-template id="919"]' ); ?>
 		</div>
-		<div class="col-md-9">
+		<div class="col-md-10">
 			<?php
 				echo do_shortcode('[rev_slider alias="home-slide"]');
 			?>
 		</div>
 	</div>
 	<div class="row">
-	<div class="col-md-3">
-		aa
+	<div class="col-md-2">
+		<?php echo do_shortcode( '[elementor-template id="906"]' ); ?>
 	</div>
-	<div class="col-md-9">
+	<div class="col-md-10">
 		<div class="header-product">
-				<div class="title">
-					Giới thiệu
-				</div>
-				<div class="content">
-				Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-				</div>
+			<?php echo do_shortcode( '[elementor-template id="916"]' ); ?>
 		</div>
 		<div class="main-seach">
 			<div class="row">

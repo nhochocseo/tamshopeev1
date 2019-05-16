@@ -42,3 +42,14 @@ Version: 1.0
     text-align: center;
     margin-bottom: 20px;
 }
+.elementor-button-icon i:before {
+    content: "\e1016";
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li.block-product {
+
+}

@@ -380,15 +380,14 @@ function ListSanPham() {
     foreach($data as $item){
         $post = $item;
         setup_postdata($post);
-        the_title();
     ?>
-    <div class="main-product">
+    <ul class="main-product">
         <?php
                 get_template_part( 'part/wc', 'single' );
                 wp_reset_postdata();
             };
         ?>
-        </div>
+    </ul>
     <?php
     }
     ?>
