@@ -50,6 +50,27 @@ ul {
     margin: 0;
     padding: 0;
 }
+ul.product-inner {
+    margin: 0;
+}
 li.block-product {
-
+    float: left;
+    margin: 0px;
+    padding: 15px 12px;
+}
+.content-product .inner-price {
+    width: 50%;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 52px;
+}
+.content-product .inner-price .amount {
+    color: #353434;
+}
+.content-product .cart-product {
+    width: 50%;
+    float: left;
+    text-align: right;
+    font-size: 30px;
 }

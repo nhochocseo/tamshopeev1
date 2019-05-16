@@ -81,7 +81,7 @@ get_header();
 				</div>
 			</div>
 		</div>
-		<div class="container-product" id="container-product">
+		<div class="container-product col-md-12" id="container-product">
 			<?php echo ListSanPham(); ?>
 		</div>
 	</div>
