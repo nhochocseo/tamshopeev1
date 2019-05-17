@@ -48,7 +48,7 @@ get_header();
 			<div class="col-md-3">
 				<div class="search-container form-group row">
 					<input type="text" placeholder="Search.." name="search" id="searchproduct">
-					<button type="submit" class="seach-product"  onclick="select_change_search(document.getElementById('searchproduct').value, '<?php echo $urldata; ?>');">Seach</button>
+					<button type="submit" class="seach-product"  onclick="select_change_search(document.getElementById('searchproduct').value, '<?php echo $urldata; ?>',1);">Seach</button>
 				</div>
 			</div>
 			<div class="col-md-3">
@@ -56,7 +56,7 @@ get_header();
 					<label for="" class="col-sm-3 col-form-label">Sắp sếp theo :</label>
 					<div class="col-sm-9">
 						<!-- <form class="woocommerce-ordering" method="POST"> -->
-								<select name="orderby" class="orderby" onchange="select_change_order(this.value, '<?php echo $urldata; ?>');">
+								<select name="orderby" class="orderby" onchange="select_change_order(this.value, '<?php echo $urldata; ?>',1);">
 								<option value="0">Chọn kiểu sắp sếp</option>
 									<option value="DESC">Giá thấp đến cao</option>
 									<option value="ASC">Giá từ cao xuống thấp</option>
@@ -70,7 +70,7 @@ get_header();
 						<label for="" class="col-sm-3 col-form-label">Khoảng giá :</label>
 						<div class="col-sm-9">
 							<!-- <form class="woocommerce-ordering" method="POST"> -->
-								<select name="orderby" class="orderby"  onchange="select_change_price(this.value, '<?php echo $urldata; ?>');">
+								<select name="orderby" class="orderby"  onchange="select_change_price(this.value, '<?php echo $urldata; ?>',1);">
 									<option value="0">Chọn khoảng giá</option>
 									<option value="0-1000000">Dưới 100.000 VND</option>
 									<option value="1000000-99999999999999999999">Trên  100.000 VND</option>

@@ -264,14 +264,15 @@ function get_data_post($min_price = '', $max_price = ''){
     $myposts = get_posts($args);
     return $myposts;
 }
-function get_all_data_post(){
+function get_all_data_post($paged){
     global $wp_the_query;
     $old_query       = $wp_the_query->query_vars;
     $args = array(
         'limit' => 2,
         'post_type' => array('product'),
         'post_status'   =>  'publish',
-        'posts_per_page'    =>  -1,
+        'posts_per_page'    =>  5,
+        'paged'          => $paged,
         'meta_query' => array(
             array(
                 'key' => '_price',
@@ -281,35 +282,14 @@ function get_all_data_post(){
             )
         )
     );
-    $tax_query  = isset( $old_query['tax_query'] ) ? $old_query['tax_query'] : array();
-    if ( version_compare( WC_VERSION, '3.0.0', '>=' ) ) {
-        $tax_query[] = array(
-            'taxonomy' => 'product_visibility',
-            'field' => 'name',
-            'terms' => 'exclude-from-catalog',
-            'operator' => 'NOT IN',
-        );
-    } else {
-        $args['meta_query'][] = array(
-            'key' => '_visibility',
-            'value' => array( 'catalog', 'visible' ),
-            'compare' => 'IN'
-        );
-    }
-    if(is_tax()){
-        if ( ! empty( $old_query['taxonomy'] ) && ! empty( $old_query['term'] ) ) {
-            $tax_query[] = array(
-                'taxonomy' => $old_query['taxonomy'],
-                'terms'    => array( $old_query['term'] ),
-                'field'    => 'slug',
-            );
-        }
-    }
+
+    
+
     $args['tax_query']  = $tax_query;
     $myposts = get_posts($args);
     return $myposts;
 }
-function get_data_post_order($order){
+function get_data_post_order($order,$paged){
     global $wp_the_query;
     $old_query       = $wp_the_query->query_vars;
     $query = new WC_Product_Query( array(
@@ -317,17 +297,19 @@ function get_data_post_order($order){
         'orderby' => 'date',
         'order' => $order,
         'return' => 'ids',
+        'paged'          => $paged,
     ) );
     $products = $query->get_products();
     return $products;
 }
-function get_seach_data_post($key){
+function get_seach_data_post($key,$paged){
     $post_type  = 'product';
         $args  		= array(
             's'                => $key,
             'post_type'        => $post_type,
             'post_status'      => 'publish',
             'posts_per_page'   => 5,
+            'paged'          => $paged,
         );
 		$query 		= new WP_Query( $args );
 		$output 	= '';
@@ -349,10 +331,23 @@ function get_seach_data_post($key){
 		
 		} else {			
 			$output .= get_template_part( 'part/wc', 'datanull' );			
-		}		
+        }
+        var_dump($query);
+        pagination_bar($query,$paged);
 		wp_reset_query();
-		echo $output;		
+        echo $output;
 		die();
+}
+function get_all_data_postv1($paged){
+    $post_type  = 'product';
+    $args  		= array(
+        'post_type'        => $post_type,
+        'post_status'      => 'publish',
+        'posts_per_page'   => 5,
+        'paged'          => $paged,
+    );
+    $query 		= new WP_Query( $args );
+    var_dump($query);
 }
 function ListSanPham() {
     global $wp_query;
@@ -363,20 +358,23 @@ function ListSanPham() {
     $max_price = isset( $_POST['max_price'] ) ? esc_attr( $_POST['max_price'] ) : '';
     $orderby = isset( $_POST['orderby'] ) ? esc_attr( $_POST['orderby'] ) : '';
     $keyseach = isset( $_POST['keyseach'] ) ? esc_attr( $_POST['keyseach'] ) : '';
+    $paged = isset( $_POST['paged'] ) ? esc_attr( $_POST['paged'] ) : 1;
     register_woo_price_range();
     $data = get_data_post($min_price,$max_price);
     if(!$min_price || !$max_price) {
-        $data = get_all_data_post();
+        $data = get_all_data_post($paged);
     }
     if($orderby) {
-        $data = get_data_post_order($orderby);
+        $data = get_data_post_order($orderby,$paged);
     }
     if($keyseach) {
-        $data = get_seach_data_post($keyseach);
+        $data = get_seach_data_post($keyseach,$paged);
     }
     if(!$data) {
         get_template_part( 'part/wc', 'datanull' );
     }
+    
+    pagination_bar($data,$paged);
     foreach($data as $item){
         $post = $item;
         setup_postdata($post);
@@ -390,4 +388,24 @@ function ListSanPham() {
     </ul>
     <?php
     }
+
+    function pagination_bar( $custom_query,$paged ) {
+
+        $total_pages = $custom_query->max_num_pages;
+        $big = 999999999; // need an unlikely integer
+        var_dump($total_pages); 
+        echo count($total_pages);
+        if ($total_pages > 1){
+            $current_page = max(1, get_query_var('paged'));
+    
+            echo paginate_links(array(
+                'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                'format' => '?paged=%#%',
+                'current' => $current_page,
+                'total' => $total_pages,
+            ));
+        }
+    }
+
+
     ?>

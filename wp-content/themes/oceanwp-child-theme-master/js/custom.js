@@ -1,8 +1,8 @@
-function  select_change_order(parent, url){
+function  select_change_order(parent, url, page){
     var ajaxurl = url;
     var data = {
       'action': 'POST',
-      'page': 1,
+      'paged': page,
       'orderby': parent
     };
 
@@ -11,14 +11,14 @@ function  select_change_order(parent, url){
     });
 };
 
-function  select_change_price(parent, url){
+function  select_change_price(parent, url, page){
   var ajaxurl = url;
   var data = parent.split('-');
   var min_price = data[data.length - data.length];
   var max_price = data[data.length - 1];
   var data = {
     'action': 'POST',
-    'page': 1,
+    'paged': page,
     'min_price': min_price,
     'max_price': max_price
   };
@@ -27,12 +27,11 @@ function  select_change_price(parent, url){
       document.getElementById("container-product").innerHTML = response;
   });
 };
-function  select_change_search(parent, url){
-  console.log(parent);
+function  select_change_search(parent, url, page){
   var ajaxurl = url;
   var data = {
     'action': 'POST',
-    'page': 1,
+    'paged': page,
     'keyseach': parent,
   };
 
