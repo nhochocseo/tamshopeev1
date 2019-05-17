@@ -10,7 +10,18 @@ function  select_change_order(parent, url, page){
         document.getElementById("container-product").innerHTML = response;
     });
 };
+function  load_all_data(url, page){
+  alert(url);
+  var ajaxurl = url;
+  var data = {
+    'action': 'POST',
+    'paged': page,
+  };
 
+  jQuery.post(ajaxurl, data, function(response) {
+      document.getElementById("container-product").innerHTML = response;
+  });
+};
 function  select_change_price(parent, url, page){
   var ajaxurl = url;
   var data = parent.split('-');

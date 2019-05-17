@@ -79,3 +79,10 @@ li.block-product {
     width: 60%;
     margin: auto;
 }
+.paging {
+    display: block;
+    clear: both;
+}
+a {
+    cursor: pointer;
+}

@@ -221,12 +221,13 @@ function get_count_post($min_price = '', $max_price = ''){
 }
 function get_data_post($min_price = '', $max_price = ''){
     if(!$max_price) return false;
-    global $wp_the_query;
-    $old_query       = $wp_the_query->query_vars;
-    $args = array(
-        'post_type' => array('product'),
-        'post_status'   =>  'publish',
-        'posts_per_page'    =>  -1,
+
+    $post_type  = 'product';
+    $args  		= array(
+        'post_type'        => $post_type,
+        'post_status'      => 'publish',
+        'posts_per_page'   => 5,
+        'paged'          => $paged,
         'meta_query' => array(
             array(
                 'key' => '_price',
@@ -236,71 +237,22 @@ function get_data_post($min_price = '', $max_price = ''){
             )
         )
     );
-    $tax_query  = isset( $old_query['tax_query'] ) ? $old_query['tax_query'] : array();
-    if ( version_compare( WC_VERSION, '3.0.0', '>=' ) ) {
-        $tax_query[] = array(
-            'taxonomy' => 'product_visibility',
-            'field' => 'name',
-            'terms' => 'exclude-from-catalog',
-            'operator' => 'NOT IN',
-        );
-    } else {
-        $args['meta_query'][] = array(
-            'key' => '_visibility',
-            'value' => array( 'catalog', 'visible' ),
-            'compare' => 'IN'
-        );
-    }
-    if(is_tax()){
-        if ( ! empty( $old_query['taxonomy'] ) && ! empty( $old_query['term'] ) ) {
-            $tax_query[] = array(
-                'taxonomy' => $old_query['taxonomy'],
-                'terms'    => array( $old_query['term'] ),
-                'field'    => 'slug',
-            );
-        }
-    }
-    $args['tax_query']  = $tax_query;
-    $myposts = get_posts($args);
-    return $myposts;
-}
-function get_all_data_post($paged){
-    global $wp_the_query;
-    $old_query       = $wp_the_query->query_vars;
-    $args = array(
-        'limit' => 2,
-        'post_type' => array('product'),
-        'post_status'   =>  'publish',
-        'posts_per_page'    =>  5,
-        'paged'          => $paged,
-        'meta_query' => array(
-            array(
-                'key' => '_price',
-                'value' => 1,
-                'compare' => 'BETWEEN',
-                'type' => 'NUMERIC'
-            )
-        )
-    );
-
-    
-
-    $args['tax_query']  = $tax_query;
-    $myposts = get_posts($args);
-    return $myposts;
+    $query 		= new WP_Query( $args );
+    return $query;
 }
 function get_data_post_order($order,$paged){
-    global $wp_the_query;
-    $old_query       = $wp_the_query->query_vars;
-    $query = new WC_Product_Query( array(
-        'limit' => 10,
+    $post_type  = 'product';
+    $args  		= array(
+        'post_type'        => $post_type,
+        'post_status'      => 'publish',
         'orderby' => 'date',
         'order' => $order,
-        'return' => 'ids',
+        'posts_per_page'   => 4,
         'paged'          => $paged,
-    ) );
-    $products = $query->get_products();
-    return $products;
+    );
+    $query 		= new WP_Query( $args );
+    return $query;
+
 }
 function get_seach_data_post($key,$paged){
     $post_type  = 'product';
@@ -332,7 +284,6 @@ function get_seach_data_post($key,$paged){
 		} else {			
 			$output .= get_template_part( 'part/wc', 'datanull' );			
         }
-        var_dump($query);
         pagination_bar($query,$paged);
 		wp_reset_query();
         echo $output;
@@ -347,7 +298,7 @@ function get_all_data_postv1($paged){
         'paged'          => $paged,
     );
     $query 		= new WP_Query( $args );
-    var_dump($query);
+    return $query;
 }
 function ListSanPham() {
     global $wp_query;
@@ -360,50 +311,49 @@ function ListSanPham() {
     $keyseach = isset( $_POST['keyseach'] ) ? esc_attr( $_POST['keyseach'] ) : '';
     $paged = isset( $_POST['paged'] ) ? esc_attr( $_POST['paged'] ) : 1;
     register_woo_price_range();
+    $type = 'price';
     $data = get_data_post($min_price,$max_price);
     if(!$min_price || !$max_price) {
-        $data = get_all_data_post($paged);
+        $type = 'all';
+        $data = get_all_data_postv1($paged);
     }
     if($orderby) {
+        $type = 'order';
         $data = get_data_post_order($orderby,$paged);
     }
     if($keyseach) {
+        $type = 'seach';
         $data = get_seach_data_post($keyseach,$paged);
     }
     if(!$data) {
         get_template_part( 'part/wc', 'datanull' );
     }
     
-    pagination_bar($data,$paged);
-    foreach($data as $item){
-        $post = $item;
-        setup_postdata($post);
-    ?>
-    <ul class="main-product">
-        <?php
+    if ( $data->have_posts() ) {
+
+        echo '<div class="main-product">';			
+            while( $data->have_posts() ) : $data->the_post();
                 get_template_part( 'part/wc', 'single' );
-                wp_reset_postdata();
-            };
-        ?>
-    </ul>
-    <?php
+            endwhile;
+        echo '</div>';
+        pagination_bar($data,$paged,$type);
+        wp_reset_query();
+    } else {			
+        get_template_part( 'part/wc', 'datanull' );			
     }
+}
 
-    function pagination_bar( $custom_query,$paged ) {
-
+    function pagination_bar( $custom_query,$paged,$type ) {
+        $urldata =  esc_url( home_url( '/data-trang-tri-theo-mua/' ) );
         $total_pages = $custom_query->max_num_pages;
         $big = 999999999; // need an unlikely integer
-        var_dump($total_pages); 
-        echo count($total_pages);
-        if ($total_pages > 1){
+        if($total_pages > 1) {
             $current_page = max(1, get_query_var('paged'));
-    
-            echo paginate_links(array(
-                'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-                'format' => '?paged=%#%',
-                'current' => $current_page,
-                'total' => $total_pages,
-            ));
+            echo "<div class='paging'>";
+            for ($i=1; $i <= $total_pages; $i++) {
+                echo "<a class='btn' onclick='load_all_data('". $urldata . "',". $i .");'>" . $i . "</a>";
+            }
+            echo "</div>";
         }
     }
 
