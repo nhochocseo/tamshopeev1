@@ -8,27 +8,36 @@ Template: oceanwp
 Version: 1.0
 */
 
+
 /* Parent stylesheet should be loaded from functions.php not using @import */
+
 .search-container {
     float: right;
-  }
+}
+
 .search-container button {
     float: right;
     padding: 6px;
-    margin-top: 8px;
+    margin-left: 7px;
     margin-right: 16px;
-    background: #ddd;
+    background: #312929;
+    background-color: #312929;
+    line-height: 25px;
     font-size: 17px;
     border: none;
     cursor: pointer;
 }
+
 .search-container input {
     width: 60%;
 }
+
+.elementor-section-full_width,
 .container-custom {
-    width: 90%;
+    width: 95%;
     margin: auto;
 }
+
 .header-product .title {
     text-transform: uppercase;
     font-weight: 600;
@@ -38,27 +47,40 @@ Version: 1.0
     margin-bottom: 15px;
     color: black;
 }
+
 .header-product .content {
     text-align: center;
     margin-bottom: 20px;
 }
+
 .elementor-button-icon i:before {
     content: "\e1016";
 }
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
+
 ul.product-inner {
     margin: 0;
 }
-li.block-product {
+
+li {
     list-style-type: none;
+}
+
+.layout1 li.block-product {
     float: left;
     margin: 0px;
-    padding: 15px 12px;
+    padding: 10px 5px;
 }
+
+.layout2 li.block-product {
+    float: none;
+}
+
 .content-product .inner-price {
     width: 50%;
     float: left;
@@ -66,23 +88,134 @@ li.block-product {
     font-weight: bold;
     line-height: 52px;
 }
+
 .content-product .inner-price .amount {
     color: #353434;
 }
+
 .content-product .cart-product {
     width: 50%;
     float: left;
     text-align: right;
     font-size: 30px;
 }
+
 .header-product {
     width: 60%;
     margin: auto;
 }
+
 .paging {
     display: block;
     clear: both;
 }
+
 a {
     cursor: pointer;
+}
+
+.main-cart .elementor-menu-cart__toggle .elementor-button {
+    border: 0;
+}
+
+.main-cart .elementor-button span {
+    font-size: 25px;
+}
+
+.main-cart .elementor-button-wrapper {
+    text-align: right;
+}
+
+.main-cart .elementor-menu-cart__toggle .elementor-button-icon[data-counter]:before {
+    content: attr(data-counter);
+    display: block;
+    position: absolute;
+    min-width: 1.6em;
+    height: 1.6em;
+    line-height: 1.5em;
+    top: 2px!important;
+    right: -39px!important;
+    border-radius: 100%;
+    color: #f50909!important;
+    background-color: #cccccc0a!important;
+    text-align: center;
+    font-size: 18px !important;
+}
+
+.main-cart .elementor-menu-cart__toggle .elementor-button-icon[data-counter]:after {
+    content: 'Sp';
+    display: block;
+    position: absolute;
+    top: 11px;
+    right: -55px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.cart-product .added_to_cart {
+    display: none!important;
+}
+
+.ajax_add_to_cart.added {
+    color: #007bff;
+}
+
+.ajax_add_to_cart {
+    margin: 15px;
+}
+
+.product-inner .title a {
+    color: #3db5ad;
+    font-size: 16px;
+}
+
+.product-inner .title a:hover {
+    color: #0d8a60;
+}
+
+.paging {
+    text-align: center;
+    padding-top: 25px;
+    margin-bottom: 25px;
+}
+
+.paging a.btn {
+    font-size: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #13a89e;
+}
+
+.paging .active {
+    background: #353434;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px
+}
+
+.paging .active a {
+    color: #FFF;
+}
+
+.custom-select-order select {
+    width: 100%;
+    height: 40px;
+    min-height: auto;
+    border: 1px solid #ddd;
+    background-color: #312929;
+    color: #fff;
+    cursor: pointer;
+    padding: 0 15px;
+    margin: 0;
+}
+
+.lab-custom {
+    color: #12a79e;
+    font-size: 13px!important;
+    font-weight: bold;
+    line-height: 35px!important;
+}
+
+.slick-slide img {
+    width: 100%;
 }

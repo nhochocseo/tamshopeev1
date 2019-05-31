@@ -696,7 +696,7 @@ if ( ! class_exists( 'OceanWP_WooCommerce_Config' ) ) {
 			if ( true == get_theme_mod( 'ocean_woo_product_ajax_add_to_cart', false ) ) {
 				$array['is_cart'] 			= is_cart();
 				$array['cart_url'] 			= apply_filters( 'ocean_woocommerce_add_to_cart_redirect', wc_get_cart_url() );
-				$array['view_cart'] 		= esc_attr__( 'View cart', 'oceanwp' );
+				$array['view_cart'] 		= esc_attr__( 'Chi tiết', 'oceanwp' );
 			}
 
 			// If multi step checkout

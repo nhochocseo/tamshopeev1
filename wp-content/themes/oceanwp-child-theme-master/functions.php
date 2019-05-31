@@ -27,6 +27,7 @@ function oceanwp_child_enqueue_parent_style() {
 	// Load the stylesheet
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'oceanwp-style' ), $version );
     wp_enqueue_style( 'child-style-bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.css', array( 'oceanwp-style' ), $version );
+    wp_enqueue_style( 'child-style-css', get_stylesheet_directory_uri() . '/css/style.css', array( 'oceanwp-style' ), $version );
     
     wp_enqueue_script( 'custom', get_stylesheet_directory_uri() . '/js/custom.js', array ( 'jquery' ), 1.1, true);
 	
@@ -226,7 +227,7 @@ function get_data_post($min_price = '', $max_price = ''){
     $args  		= array(
         'post_type'        => $post_type,
         'post_status'      => 'publish',
-        'posts_per_page'   => 5,
+        'posts_per_page'   => 12,
         'paged'          => $paged,
         'meta_query' => array(
             array(
@@ -243,11 +244,19 @@ function get_data_post($min_price = '', $max_price = ''){
 function get_data_post_order($order,$paged){
     $post_type  = 'product';
     $args  		= array(
-        'post_type'        => $post_type,
-        'post_status'      => 'publish',
-        'orderby' => 'date',
+        'post_type'     => 'product',
+        'posts_per_page' => -1,
         'order' => $order,
-        'posts_per_page'   => 4,
+        'orderby' => 'meta_value_num',
+        'meta_key' => '_price',
+        'meta_query' => array(
+            array(
+            'key'       => '_price',
+            'compare'   => '=',
+            'type'      => 'NUMERIC',
+            )
+        ),
+        'posts_per_page'   => 12,
         'paged'          => $paged,
     );
     $query 		= new WP_Query( $args );
@@ -260,7 +269,7 @@ function get_seach_data_post($key,$paged){
             's'                => $key,
             'post_type'        => $post_type,
             'post_status'      => 'publish',
-            'posts_per_page'   => 5,
+            'posts_per_page'   => 12,
             'paged'          => $paged,
         );
 		$query 		= new WP_Query( $args );
@@ -284,7 +293,7 @@ function get_seach_data_post($key,$paged){
 		} else {			
 			$output .= get_template_part( 'part/wc', 'datanull' );			
         }
-        pagination_bar($query,$paged);
+        pagination_bar($query,$paged,'seach',$key);
 		wp_reset_query();
         echo $output;
 		die();
@@ -294,7 +303,7 @@ function get_all_data_postv1($paged){
     $args  		= array(
         'post_type'        => $post_type,
         'post_status'      => 'publish',
-        'posts_per_page'   => 5,
+        'posts_per_page'   => 12,
         'paged'          => $paged,
     );
     $query 		= new WP_Query( $args );
@@ -312,6 +321,7 @@ function ListSanPham() {
     $paged = isset( $_POST['paged'] ) ? esc_attr( $_POST['paged'] ) : 1;
     register_woo_price_range();
     $type = 'price';
+    $datakey = $min_price + '-' + $max_price;
     $data = get_data_post($min_price,$max_price);
     if(!$min_price || !$max_price) {
         $type = 'all';
@@ -319,10 +329,12 @@ function ListSanPham() {
     }
     if($orderby) {
         $type = 'order';
+        $datakey = $orderby;
         $data = get_data_post_order($orderby,$paged);
     }
     if($keyseach) {
         $type = 'seach';
+        $datakey = $keyseach;
         $data = get_seach_data_post($keyseach,$paged);
     }
     if(!$data) {
@@ -336,26 +348,40 @@ function ListSanPham() {
                 get_template_part( 'part/wc', 'single' );
             endwhile;
         echo '</div>';
-        pagination_bar($data,$paged,$type);
+        pagination_bar($data,$paged,$type,$datakey);
         wp_reset_query();
     } else {			
         get_template_part( 'part/wc', 'datanull' );			
     }
 }
 
-    function pagination_bar( $custom_query,$paged,$type ) {
-        $urldata =  esc_url( home_url( '/data-trang-tri-theo-mua/' ) );
+    function pagination_bar( $custom_query,$paged,$type,$datakey ) {
+        $urldata =  esc_url( home_url( '/data-trang-tri-theo-mua' ) );
         $total_pages = $custom_query->max_num_pages;
         $big = 999999999; // need an unlikely integer
         if($total_pages > 1) {
             $current_page = max(1, get_query_var('paged'));
             echo "<div class='paging'>";
             for ($i=1; $i <= $total_pages; $i++) {
-                echo "<a class='btn' onclick='load_all_data('". $urldata . "',". $i .");'>" . $i . "</a>";
-            }
+            ?>
+                <?php if($type == 'all') { ?>
+                    <a class="btn <?php if($i == 1) { echo 'active';} ?>" id="page-<?php echo $i ?>" onclick="load_all_data('<?php echo $urldata; ?>',<?php echo $i ?>);"><?php echo $i ?></a>
+                <?php } ?>
+                <?php if($type == 'order') { ?>
+                    <a class="btn <?php if($i == 1) { echo 'active';} ?>" id="page-<?php echo $i ?>" onclick="select_change_order('<?php echo $datakey; ?>','<?php echo $urldata; ?>',<?php echo $i ?>);"><?php echo $i ?></a>
+                <?php } ?>
+                <?php if($type == 'seach') { ?>
+                    <a class="btn <?php if($i == 1) { echo 'active';} ?>" id="page-<?php echo $i ?>" onclick="select_change_search('<?php echo $datakey; ?>','<?php echo $urldata; ?>',<?php echo $i ?>);"><?php echo $i ?></a>
+                <?php } ?>
+                <?php if($type == 'price') { ?>
+                    <a class="btn <?php if($i == 1) { echo 'active';} ?>" id="page-<?php echo $i ?>" onclick="select_change_price('<?php echo $datakey; ?>','<?php echo $urldata; ?>',<?php echo $i ?>);"><?php echo $i ?></a>
+                <?php } ?>
+            <?php }
             echo "</div>";
         }
     }
 
-
+    function CountProduct() {
+        
+    }
     ?>

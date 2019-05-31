@@ -74,8 +74,11 @@ if ( $secondary_img_id ) : ?>
 			echo wp_get_attachment_image( $secondary_img_id, 'shop_catalog', '', $second_img ); ?>
 		</a>
 		<?php do_action( 'ocean_after_product_entry_image' ); ?>
-	</div><!-- .woo-entry-image-swap -->
-
+	</div>
+	<!-- .woo-entry-image-swap aaaaa -->	
+	<div class="title">
+		<?php echo get_the_title(); ?>
+	</div>
 <?php else : ?>
 
 	<div class="woo-entry-image clr canfix">
@@ -86,6 +89,10 @@ if ( $secondary_img_id ) : ?>
 			echo wp_get_attachment_image( $attachment, 'shop_catalog', '', $first_img ); ?>
 		</a>
 		<?php do_action( 'ocean_after_product_entry_image' ); ?>
-	</div><!-- .woo-entry-image -->
+	</div>
+	<div class="title">
+		<?php echo get_the_title(); ?>
+	</div>
+	<!-- .woo-entry-image -->
 
 <?php endif; ?>

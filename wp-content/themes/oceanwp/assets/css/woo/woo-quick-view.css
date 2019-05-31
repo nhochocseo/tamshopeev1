@@ -3,20 +3,24 @@ Woo Quick View
 -------------------------------------------------------------------*/
 .owp-quick-view {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px 0;
+  bottom: auto;
+  right: 0;
+  left: auto;
+  width: 25px;
+  height: 25px;
+  padding: 7px 0;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0,0,0,0.6);
   color: #fff;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.4px;
+  letter-spacing: -6.6px;
   opacity: 0;
   visibility: hidden;
   z-index: 12;
+  border-radius: 50%;
+  top: 16%;
 }
 
 .owp-quick-view:hover {
