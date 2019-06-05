@@ -117,7 +117,7 @@ jQuery(function($) {
 
             // View cart text.
             if (!oceanwpLocalize.is_cart && $button.parent().find('.added_to_cart').length === 0) {
-                $button.after(' <a href="' + oceanwpLocalize.cart_url + '" class="added_to_cart wc-forward aaaaaaaaaaaaaaaaa" title="' +
+                $button.after(' <a href="' + oceanwpLocalize.cart_url + '" class="added_to_cart wc-forward" title="' +
                     oceanwpLocalize.view_cart + '">' + oceanwpLocalize.view_cart + '22</a>');
             }
         }

@@ -28,10 +28,16 @@ function oceanwp_child_enqueue_parent_style() {
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'oceanwp-style' ), $version );
     wp_enqueue_style( 'child-style-bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.css', array( 'oceanwp-style' ), $version );
     wp_enqueue_style( 'child-style-css', get_stylesheet_directory_uri() . '/css/style.css', array( 'oceanwp-style' ), $version );
+<<<<<<< HEAD
     wp_enqueue_style( 'child-style-cssssss', get_stylesheet_directory_uri() . '/css/custom.css', array( 'oceanwp-style' ), $version );
 
     wp_enqueue_script( 'custom', get_stylesheet_directory_uri() . '/js/custom.js', array ( 'jquery' ), 1.1, true);
 
+=======
+    
+    wp_enqueue_script( 'custom', get_stylesheet_directory_uri() . '/js/custom.js', array ( 'jquery' ), 1.1, true);
+	
+>>>>>>> 868a74934b09db7af4146f41dc8467ffc3ad919f
 }
 add_action( 'wp_enqueue_scripts', 'oceanwp_child_enqueue_parent_style' );
 
@@ -160,7 +166,42 @@ function get_count_post($min_price = '', $max_price = ''){
                 'compare' => 'BETWEEN',
                 'type' => 'NUMERIC'
             )
+<<<<<<< HEAD
         )        
+=======
+        )
+        // 'meta_query' => array(
+        //     'relation' => 'OR',
+        //     array(
+        //         array(
+        //             'key' => '_price',
+        //             'value' => 10,
+        //             'compare' => '>=',
+        //             'type' => 'NUMERIC'
+        //         ),
+        //         array(
+        //             'key' => '_price',
+        //             'value' => 15,
+        //             'compare' => '<=',
+        //             'type' => 'NUMERIC'
+        //         )
+        //     ),
+        //     array(
+        //         array(
+        //             'key' => '_sale_price',
+        //             'value' => 10,
+        //             'compare' => '>=',
+        //             'type' => 'NUMERIC'
+        //         ),
+        //         array(
+        //             'key' => '_sale_price',
+        //             'value' => 15,
+        //             'compare' => '<=',
+        //             'type' => 'NUMERIC'
+        //         )
+        //     )
+        // )
+>>>>>>> 868a74934b09db7af4146f41dc8467ffc3ad919f
     );
     $tax_query  = isset( $old_query['tax_query'] ) ? $old_query['tax_query'] : array();
     if ( version_compare( WC_VERSION, '3.0.0', '>=' ) ) {
@@ -254,14 +295,24 @@ function get_seach_data_post($key,$paged){
 
 		if ( $query->have_posts() ) {
 
+<<<<<<< HEAD
 			$output .= '<div class="main-product">';
+=======
+			$output .= '<div class="main-product">';			
+>>>>>>> 868a74934b09db7af4146f41dc8467ffc3ad919f
 				while( $query->have_posts() ) : $query->the_post();
                 $output .=  get_template_part( 'part/wc', 'single' );
 				endwhile;
             $output .= '</div>';
+<<<<<<< HEAD
 
 		} else {
 			$output .= get_template_part( 'part/wc', 'datanull' );
+=======
+		
+		} else {			
+			$output .= get_template_part( 'part/wc', 'datanull' );			
+>>>>>>> 868a74934b09db7af4146f41dc8467ffc3ad919f
         }
         pagination_bar($query,$paged,'seach',$key);
 		wp_reset_query();
@@ -312,6 +363,7 @@ function ListSanPham() {
     if(!$data) {
         get_template_part( 'part/wc', 'datanull' );
     }
+<<<<<<< HEAD
 
     if ( $data->have_posts() ) {
 
@@ -324,6 +376,20 @@ function ListSanPham() {
         wp_reset_query();
     } else {
         get_template_part( 'part/wc', 'datanull' );
+=======
+    
+    if ( $data->have_posts() ) {
+
+        echo '<div class="main-product">';			
+            while( $data->have_posts() ) : $data->the_post();
+                get_template_part( 'part/wc', 'single' );
+            endwhile;
+        echo '</div>';
+        pagination_bar($data,$paged,$type,$datakey);
+        wp_reset_query();
+    } else {			
+        get_template_part( 'part/wc', 'datanull' );			
+>>>>>>> 868a74934b09db7af4146f41dc8467ffc3ad919f
     }
 }
 
@@ -354,6 +420,10 @@ function ListSanPham() {
     }
 
     function CountProduct() {
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 868a74934b09db7af4146f41dc8467ffc3ad919f
     }
     ?>
