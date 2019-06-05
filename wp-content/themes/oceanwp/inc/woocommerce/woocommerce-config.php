@@ -696,7 +696,7 @@ if ( ! class_exists( 'OceanWP_WooCommerce_Config' ) ) {
 			if ( true == get_theme_mod( 'ocean_woo_product_ajax_add_to_cart', false ) ) {
 				$array['is_cart'] 			= is_cart();
 				$array['cart_url'] 			= apply_filters( 'ocean_woocommerce_add_to_cart_redirect', wc_get_cart_url() );
-				$array['view_cart'] 		= esc_attr__( 'View cart', 'oceanwp' );
+				$array['view_cart'] 		= esc_attr__( 'Chi tiết', 'oceanwp' );
 			}
 
 			// If multi step checkout
@@ -1080,8 +1080,8 @@ if ( ! class_exists( 'OceanWP_WooCommerce_Config' ) ) {
 		 */
 		public static function quick_view_button() {
 			global $product;
-
-			$button  = '<a href="#" id="product_id_' . $product->get_id() . '" class="owp-quick-view" data-product_id="' . $product->get_id() . '"><i class="icon-eye"></i>' . esc_html__( '', 'oceanwp' ) . '</a>';
+			$url = get_permalink( $product->get_id() );
+			$button  = '<div class="btn-wrap"><a href="'.get_permalink($product_id).'" id="product_id_' . $product->get_id() . '" class="owp-quick-view1" data-product_id="' . $product->get_id() . '"><i class="icon-eye"></i>' . esc_html__( ' Xem chi tiết', 'oceanwp' ) . '</a></div>';
 			// $button  = '<a href="#" id="product_id_' . $product->get_id() . '" class="owp-quick-view" data-product_id="' . $product->get_id() . '"><i class="icon-eye"></i>' . esc_html__( 'Quick View', 'oceanwp' ) . '</a>';
 
 			echo apply_filters( 'ocean_woo_quick_view_button_html', $button );

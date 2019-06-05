@@ -1,0 +1,19 @@
+.elementor-1055 .elementor-element.elementor-element-439a06d .elementor-image img{filter:brightness( 100% ) contrast( 100% ) saturate( 100% ) blur( 0px ) hue-rotate( 0deg );}/* Start custom CSS for image, class: .elementor-element-439a06d */.elementor-1055 .elementor-element.elementor-element-439a06d{
+    position:relative;
+    
+}
+
+.elementor-1055 .elementor-element.elementor-element-439a06d:before{
+    content:'red';
+    position:absolute;
+    left:0;
+    top:0;
+    width:50px;
+    height:50px;
+    background:red;
+    display:none;
+}
+
+.elementor-1055 .elementor-element.elementor-element-439a06d:hover .elementor-1055 .elementor-element.elementor-element-439a06d:before{
+    display:block !important;
+}/* End custom CSS */

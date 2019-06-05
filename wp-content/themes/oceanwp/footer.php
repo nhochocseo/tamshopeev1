@@ -69,5 +69,6 @@ if ( 'fullscreen' == oceanwp_mobile_menu_style() ) {
 } ?>
 
 <?php wp_footer(); ?>
+
 </body>
 </html>

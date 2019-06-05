@@ -1,0 +1,285 @@
+2019-05-17T04:41:18+00:00 CRITICAL syntax error, unexpected end of file in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 418
+
+2019-05-17T04:41:19+00:00 CRITICAL syntax error, unexpected end of file in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 418
+
+2019-05-17T04:41:22+00:00 CRITICAL syntax error, unexpected end of file in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 418
+
+2019-05-17T04:47:32+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:377
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/trang-tri-theo-mua.php(85): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 377
+
+2019-05-17T04:47:33+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:377
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/trang-tri-theo-mua.php(85): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 377
+
+2019-05-17T04:47:59+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:377
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/trang-tri-theo-mua.php(85): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 377
+
+2019-05-17T04:47:59+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:377
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/trang-tri-theo-mua.php(85): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 377
+
+2019-05-17T04:53:09+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T04:53:13+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T04:53:23+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T04:53:34+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T04:53:42+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T06:35:17+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T06:37:38+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T06:37:54+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T06:39:04+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T06:39:28+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T06:40:30+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T06:40:33+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T06:40:37+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T06:40:48+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T06:43:24+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T06:43:45+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T06:47:21+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T06:47:36+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T06:48:03+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T06:50:23+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T06:50:35+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T06:50:42+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:378
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 378
+
+2019-05-17T06:54:27+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:376
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 376
+
+2019-05-17T06:54:29+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:376
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 376
+
+2019-05-17T06:54:34+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:376
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 376
+
+2019-05-17T06:56:53+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:389
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 389
+
+2019-05-17T06:57:01+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:389
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/data-trang-tri-theo-mua.php(6): ListSanPham()
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#4 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 389
+

@@ -1,0 +1,34 @@
+/* button arrow slider banner trang tri*/
+.elementor-slick-slider .slick-next.slick-disabled:before, .elementor-slick-slider .slick-prev.slick-disabled:before{
+    opacity: 1 !important;
+}
+
+/*button arrow slider products*/
+.oew-woo-slider ul.products .slick-arrow{
+    font-size:20px !important;
+}
+
+/*button back to top*/
+#scroll-top{
+    background-color: white;
+    color: #0ea69c;
+    border-radius: 50%;
+    border: 2px solid #7e7d7e;
+}
+
+
+/*search input*/
+.elementor-42 .elementor-element.elementor-element-4bef12b:not(.elementor-search-form--skin-full_screen) .elementor-search-form__container{
+    background: white !important;
+    border-radius:0 !important;
+}
+
+.elementor-42 .elementor-element.elementor-element-4bef12b .elementor-search-form__input, .elementor-42 .elementor-element.elementor-element-4bef12b.elementor-search-form--button-type-text .elementor-search-form__submit{
+    background: white;
+    border: 1px solid gray;
+    margin-right:5px;
+}
+
+form input[type="search"]{
+    border-radius:0;
+}

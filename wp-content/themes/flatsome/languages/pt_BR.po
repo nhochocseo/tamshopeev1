@@ -957,7 +957,7 @@ msgstr "Subtotal do carrinho"
 
 # @ woocommerce
 #: header.php:268 inc/template-tags.php:299
-msgid "View Cart"
+msgid "Chi tiết"
 msgstr "Ver Carrinho"
 
 # @ woocommerce

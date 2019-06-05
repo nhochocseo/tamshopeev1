@@ -1,0 +1,53 @@
+2019-05-21T08:26:16+00:00 CRITICAL Uncaught Error: Call to undefined function length() in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:355
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php(342): pagination_bar(Object(WP_Query), 1, 'all', 0)
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/trang-tri-theo-mua.php(85): ListSanPham()
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#4 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#5 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 355
+
+2019-05-21T08:26:16+00:00 CRITICAL Uncaught Error: Call to undefined function length() in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:355
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php(342): pagination_bar(Object(WP_Query), 1, 'all', 0)
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/trang-tri-theo-mua.php(85): ListSanPham()
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#4 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#5 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 355
+
+2019-05-21T08:26:16+00:00 CRITICAL Uncaught Error: Call to undefined function length() in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:355
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php(342): pagination_bar(Object(WP_Query), 1, 'all', 0)
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/trang-tri-theo-mua.php(85): ListSanPham()
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#4 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#5 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 355
+
+2019-05-21T08:26:34+00:00 CRITICAL Uncaught Error: Call to undefined function length() in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php:355
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php(342): pagination_bar(Object(WP_Query), 1, 'all', 0)
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/template/trang-tri-theo-mua.php(85): ListSanPham()
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/template-loader.php(78): include('/home/vfirstad/...')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-blog-header.php(19): require_once('/home/vfirstad/...')
+#4 /home/vfirstad/domains/tamnguyenshop.vn/public_html/index.php(17): require('/home/vfirstad/...')
+#5 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 355
+
+2019-05-21T08:26:52+00:00 CRITICAL Object of class WP_Query could not be converted to string in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 355
+
+2019-05-21T08:26:52+00:00 CRITICAL Object of class WP_Query could not be converted to string in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/themes/oceanwp-child-theme-master/functions.php on line 355
+
+2019-05-21T09:29:17+00:00 CRITICAL Uncaught Error: Call to a member function get_cart() on null in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/woocommerce-quick-buy/includes/common-functions.php:50
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/woocommerce-quick-buy/includes/class-frontend.php(120): wc_qb_product_in_cart(416)
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/woocommerce-quick-buy/includes/class-quick-buy-auto-add.php(83): WooCommerce_Quick_Buy_FrontEnd->generate_button(Array)
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/class-wp-hook.php(286): WooCommerce_Quick_Buy_Auto_Add->add_shop_quick_buy_button('')
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#4 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#5 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/woocom in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/woocommerce-quick-buy/includes/common-functions.php on line 50
+

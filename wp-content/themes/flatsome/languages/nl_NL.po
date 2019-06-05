@@ -1076,7 +1076,7 @@ msgid "%s <span class=\"says\">says:</span>"
 msgstr "%s <span class=\"says\">zegt:</span>"
 
 #: header.php:268 inc/template-tags.php:299
-msgid "View Cart"
+msgid "Chi tiết"
 msgstr "Toon winkelmand"
 
 #: inc/template-tags.php:343 woocommerce/single-product/review.php:23

@@ -1,0 +1,46 @@
+2019-05-22T14:34:10+00:00 CRITICAL Uncaught Error: Call to undefined function Aepro\get_field_objects() in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/anywhere-elementor-pro/includes/helper.php:1212
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/anywhere-elementor-pro/includes/admin/admin-helper.php(65): Aepro\Helper->ae_acf_get_field_objects('416')
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/class-wp-hook.php(286): Aepro\Admin\AdminHelper->ae_acf_repeater_fields('')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-admin/admin-ajax.php(173): do_action('wp_ajax_ae_acf_...')
+#5 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/anywhere-elementor-pro/includes/helper.php on line 1212
+
+2019-05-22T14:38:27+00:00 CRITICAL Uncaught Error: Call to undefined function Aepro\get_field_objects() in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/anywhere-elementor-pro/includes/helper.php:1212
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/anywhere-elementor-pro/includes/admin/admin-helper.php(65): Aepro\Helper->ae_acf_get_field_objects('416')
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/class-wp-hook.php(286): Aepro\Admin\AdminHelper->ae_acf_repeater_fields('')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-admin/admin-ajax.php(173): do_action('wp_ajax_ae_acf_...')
+#5 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/anywhere-elementor-pro/includes/helper.php on line 1212
+
+2019-05-22T15:31:45+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/elementor/core/files/css/base.php on line 321
+
+2019-05-22T15:32:18+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/elementor/core/files/css/base.php on line 328
+
+2019-05-22T15:33:10+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/elementor/core/files/css/base.php on line 321
+
+2019-05-22T15:35:38+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/elementor/core/files/css/base.php on line 321
+
+2019-05-22T15:36:29+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/elementor/core/files/css/base.php on line 321
+
+2019-05-22T15:37:04+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/elementor/core/files/css/base.php on line 328
+
+2019-05-22T15:37:58+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/elementor/includes/base/controls-stack.php on line 312
+
+2019-05-22T15:40:20+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/elementor/core/files/css/base.php on line 321
+
+2019-05-22T15:41:14+00:00 CRITICAL Uncaught Error: Call to undefined function Aepro\get_field_objects() in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/anywhere-elementor-pro/includes/helper.php:1212
+Stack trace:
+#0 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/anywhere-elementor-pro/includes/admin/admin-helper.php(65): Aepro\Helper->ae_acf_get_field_objects('416')
+#1 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/class-wp-hook.php(286): Aepro\Admin\AdminHelper->ae_acf_repeater_fields('')
+#2 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-admin/admin-ajax.php(173): do_action('wp_ajax_ae_acf_...')
+#5 {main}
+  thrown in /home/vfirstad/domains/tamnguyenshop.vn/public_html/wp-content/plugins/anywhere-elementor-pro/includes/helper.php on line 1212
+
